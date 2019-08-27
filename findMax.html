@@ -34,10 +34,31 @@
 
     }
 </script>
-    <input type="text" id="text_num1">
-    <input type="text" id="text_num2">
-    <input type="text" id="text_num3">
+    <input type="text" id="text_num1" value=""><br>
+    <input type="text" id="text_num2" value=""><br>
+    <input type="text" id="text_num3" value="">
     <button type="button" onclick="find()">Click me</button>
-    <button type="button" onclick="TinhTB()">Tìm trung bình </button>
+    <button type="button" onclick="TinhTB()">Tìm trung bình </button><br><hr>
+    <label >chuyển đổi tiền tệ</label> <br>
+
+    <label >Nhập số tiền </label> <br>
+    <input type="text" id="Xien" value="">
+    <button type="button" onclick="ChangeMoney()">
+        Chuyển tiền sang
+    </button>
+    <select name="money" id="money">
+        <option value="usd">USD</option>
+        <option value="euro"  >EURO</option>
+        <option value="NDT">NDT</option>
+    </select>
+
+    <input type="text" disabled id="money_output">
+
+<script>
+    function ChangeMoney() {
+
+        document.getElementById('menoy').selectedIndex = "1";
+    }
+</script>
 </body>
 </html>
