@@ -6,8 +6,9 @@
 </head>
 <body>
 <script>
+    let a,b,c;
     function find(){
-        let a,b,c, max;
+        let max;
         a = Number(document.getElementById('text_num1').value);
         b = Number(document.getElementById('text_num2').value);
         c = Number(document.getElementById('text_num3').value);
@@ -23,10 +24,20 @@
         }
         alert(max);
     }
+
+    function TinhTB() {
+        a = Number(document.getElementById('text_num1').value);
+        b = Number(document.getElementById('text_num2').value);
+        c = Number(document.getElementById('text_num3').value);
+        let tb = (a+b+c)/3;
+        alert(tb);
+
+    }
 </script>
     <input type="text" id="text_num1">
     <input type="text" id="text_num2">
     <input type="text" id="text_num3">
-    <button type="buuton" onclick="find()">Click me</button>
+    <button type="button" onclick="find()">Click me</button>
+    <button type="button" onclick="TinhTB()">Tìm trung bình </button>
 </body>
 </html>
