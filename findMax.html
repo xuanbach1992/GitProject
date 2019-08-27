@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm số lớn nhất</title>
+</head>
+<body>
+<script>
+    function find(){
+        let a,b,c, max;
+        a = Number(document.getElementById('text_num1').value);
+        b = Number(document.getElementById('text_num2').value);
+        c = Number(document.getElementById('text_num3').value);
+         max = a;
+        if (max < b){
+            max = b;
+            if (max <c){
+                max = c;
+            }
+        }
+        else if (max < c){
+            max = c;
+        }
+        alert(max);
+    }
+</script>
+    <input type="text" id="text_num1">
+    <input type="text" id="text_num2">
+    <input type="text" id="text_num3">
+    <button type="buuton" onclick="find()">Click me</button>
+</body>
+</html>
