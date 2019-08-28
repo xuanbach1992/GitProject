@@ -47,7 +47,7 @@
         Chuyển tiền sang
     </button>
     <select name="money" id="money">
-        <option value="usd">USD</option>
+        <option value="usd" selected>USD</option>
         <option value="euro"  >EURO</option>
         <option value="NDT">NDT</option>
     </select>
@@ -56,8 +56,16 @@
 
 <script>
     function ChangeMoney() {
+    let x = document.getElementById('money').selectedIndex;
+    x=Number(x);
+   // alert(x);
+        if(x = 0){
+            alert (x);
+        }
+        else {
+            alert("sai roi");
+        }
 
-        document.getElementById('menoy').selectedIndex = "1";
     }
 </script>
 </body>
