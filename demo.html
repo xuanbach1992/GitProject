@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <title>Form</title>
+        </head>
+<body>
+<!--<script type="text/javascript" src="code_js.js"></script>-->
+<input type="text" id="text_box" onkeypress="myFunction()">
+<form action="bai1.html">
+    Nhập chuỗi  </br>
+    <input type="checkbox" id="IsNumber" name="isNumber" value="0">Chỉ là số
+    <input type="checkbox" id="IsSpecial" name="IsSpecial" value="0">Chỉ là kí tự đặc biệt<br>
+    <button type="button" id="btn1" name="tang" value="" onclick="up()" > UP</button>
+    <button type="button" id="btn2" name="giam" value="" onclick="down()">DOWN</button><br>
+    <label>Kết quả</label><br>
+    <input type="text" name="ketqua1" id="ketqua1"  value=" "disabled	>
+    <input type="hidden" name="ketqua" id="ketqua" value=" ">
+</form>
+<p id="demo"></p>
+
+<script>
+    var str1;
+    function up(){
+        str1= document.getElementById('text_box').value;
+        var ar = [];
+        for (var i = 0; i < str1.length; i++) {
+            ar.push(str1.charCodeAt(i));
+        }
+        var array1 = ar.sort(function(a, b){
+            return a-b
+        });
+        var array2 = [];
+        for (var i = 0; i < array1.length; i++) {
+            array2.push(String.fromCharCode(array1[i]));
+        }
+        for (var i = 0; i < array2.length; i++) {
+            var print =array2.join('')
+            document.getElementById('demo').innerHTML="<h1><b>"+print+"</b></h1>";// in trên html
+            document.getElementById('ketqua1').value=print; //textbox
+        }
+    }
+    function down(){
+        str1= document.getElementById('text_box').value;
+        var ar = [];
+        for (var i = 0; i < str1.length; i++) {
+            ar.push(str1.charCodeAt(i));
+        }
+        var array1 = ar.sort(function(a, b){
+            return b-a
+        });
+        var array2 = [];
+        for (var i = 0; i < array1.length; i++) {
+            array2.push(String.fromCharCode(array1[i]));
+        }
+        for (var i = 0; i < array2.length; i++) {
+            var print =array2.join('')
+            document.getElementById('demo').innerHTML="<h1><b>"+print+"</b></h1>";// in trên html
+            document.getElementById('ketqua1').value=print; //textbox
+        }
+    }
+    function myFunction() {
+        var isNumber =  document.getElementById("IsNumber").checked;
+        var isSpecial =  document.getElementById("IsSpecial").checked;
+        var evt = window.event;
+        /*if (theEvent.type === 'paste') {
+          key = event.clipboardData.getData('text/plain');//web api
+        } else {*/
+        var key = evt.keyCode || evt.which; //trả về keyCode của kí tự theo event Onkeypress. DOM event obj
+        key = String.fromCharCode(key);// Chuyển đổi số  thành ký tự theo mã unicode
+        //alert(theEvent);
+        //alert(theEvent.type);
+        var count1 = /[^0-9]/;
+        var count2 = /[0-9A-Za-z]/;//or [0-9]|[a-z]|[A-Z]
+        //var count3 = /[a-z]|[A-Z]/;
+        if(isNumber){
+            if(count1.test(key) ) {
+                evt.returnValue = false;
+                //alert(evt.returnValue);//hanh đọng mặc định đc chặn hay không
+                if(evt.preventDefault) evt.preventDefault();//huy bo,run preventDefault
+            }
+        }/*
+		else {
+			if (count3.test(key) ) {
+			//	evt.returnValue = false;
+				if(evt.preventDefault) evt.preventDefault();
+			}
+		}*/
+        if (isSpecial) {
+            if (count2.test(key)){
+                evt.returnValue = false;
+                if(evt.preventDefault) evt.preventDefault();
+            }
+
+        }
+    }
+</script>
+</body>
+</html></title>
+</head>
+<body>
+
+</body>
+</html>
