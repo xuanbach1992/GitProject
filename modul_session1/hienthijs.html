@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hieenr thi dau ra js</title>
+</head>
+<body>
+<p id="demoText"></p>
+    <button type="button" onclick="kieu1()">Button alert</button>
+    <br>
+    <button type="button" onclick="kieu2()">Button write</button>
+    <br>
+    <button type="button" onclick="kieu3()">inner HTML</button>
+    <br>
+    <button type="button" onclick="kieu4()">ConsoleLog</button>
+    <br>
+    <script>
+        function kieu1() {
+            alert("hien thi kieu alert");
+        }
+        function kieu2() {
+            document.write("hello world");
+        }
+
+        function kieu3() {
+                document.getElementById('demoText').innerHTML="xin chao";
+        }
+
+        function kieu4() {
+            console.log('Hello everybody');
+            }
+    </script>
+</body>
+</html>
