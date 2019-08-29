@@ -42,30 +42,32 @@
     <label >chuyển đổi tiền tệ</label> <br>
 
     <label >Nhập số tiền </label> <br>
-    <input type="text" id="Xien" value="">
+    <input type="text" id="money_input" value="">
+
+    <select  id="toCurrency">
+        <option value="23000" selected>USD</option>
+        <option value="27000"  >EURO</option>
+        <option value="3000">NDT</option>
+        <option value="1">VND</option>
+    </select>
     <button type="button" onclick="ChangeMoney()">
-        Chuyển tiền sang
+        Convert
     </button>
-    <select name="money" id="money">
-        <option value="usd" selected>USD</option>
-        <option value="euro"  >EURO</option>
-        <option value="NDT">NDT</option>
+    <select  id="fromCurrency">
+        <option value="23000">USD</option>
+        <option value="27000"  >EURO</option>
+        <option value="3000">NDT</option>
+        <option value="1" selected>VND</option>
     </select>
 
     <input type="text" disabled id="money_output">
 
 <script>
     function ChangeMoney() {
-    let x = document.getElementById('money').selectedIndex;
-    x=Number(x);
-   // alert(x);
-        if(x = 0){
-            alert (x);
-        }
-        else {
-            alert("sai roi");
-        }
-
+    let x = document.getElementById('toCurrency').value;
+    let y= document.getElementById('fromCurrency').value;
+    let z=document.getElementById('money_input').value;
+    document.getElementById('money_output').value=(x*z)/y;
     }
 </script>
 </body>
