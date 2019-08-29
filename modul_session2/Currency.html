@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Convert Currency</title>
+</head>
+<body>
+<form  >
+    <input type="text" id="ammout">
+    <select name="" id="fromCurrency">
+        <option value="23140" selected>USD</option>
+        <option value="1">VND</option>
+        <option value="3176">CNY</option>
+        <option value="25498">EURO</option>
+    </select>
+    <button type="button" onclick="convert()">Convert</button>
+    <select name="" id="toCurrency">
+        <option value="23140">USD</option>
+        <option value="1"selected>VND</option>
+        <option value="3176">NDT</option>
+        <option value="25498">EURO</option>
+    </select>
+    <input type="text" id="money" disabled>
+    <script>
+        function convert() {
+            let x=+document.getElementById('ammout').value;
+            let y=+document.getElementById('fromCurrency').value;
+            let z=+document.getElementById('toCurrency').value;
+            document.getElementById('money').value=x*y/z;
+            // co fix kieu chi chon option khi co san value thi tu convert
+        }
+    </script>
+</form>
+</body>
+</html>
