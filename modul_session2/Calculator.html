@@ -2,9 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Calculator</title>
 </head>
 <body>
+<input type="text" id="num_input1" oninput="cle()"><br>
 
+<button type="button" name="button" value="1"     onclick="checkMath()">Add(+)</button>
+<button type="button" name="button" value="2"     onclick="checkMath()">Sub(-)</button>
+<button type="button" name="button" value="3"     onclick="checkMath()">Multi(*)</button>
+<button type="button" name="button" value="4"     onclick="checkMath()">Div(/)</button>
+<br>
+<hr>
+<input type="text" id="result" disabled>
+<script>
+    function cle(){
+        let a=
+        document.getElementById('result').value= document.getElementById('num_input1').value;
+    }
+    function checkMath() {
+        let a=document.getElementsByTagName('button').value;
+
+</script>
 </body>
 </html>
