@@ -12,22 +12,22 @@
         window.addEventListener('keydown', moveSelection);
     }
 
-    function upArrowPress() {
+    function upArrowDown() {
         let element = document.getElementById("imageNobita");
         element.style.top = parseInt(element.style.top) - 5 + 'px';
     }
 
-    function downArrowPress() {
+    function downArrowDown() {
         var element = document.getElementById("imageNobita");
         element.style.top = parseInt(element.style.top) + 5 + 'px';
     }
 
-    function leftArrowPress() {
+    function leftArrowDown() {
         var element = document.getElementById("imageNobita");
         element.style.left = parseInt(element.style.left) - 5 + 'px';
     }
 
-    function rightArrowPress() {
+    function rightArrowDown() {
         var element = document.getElementById("imageNobita");
         element.style.left = parseInt(element.style.left) + 5 + 'px';
 
@@ -37,17 +37,19 @@
 
         switch (sukien.which) {
             case 37:
-                leftArrowPress();
+                leftArrowDown();
                 break;
             case 39:
-                rightArrowPress();
+                rightArrowDown();
                 break;
             case 38:
-                upArrowPress();
+                upArrowDown();
                 break;
             case 40:
-                downArrowPress();
+                downArrowDown();
                 break;
+            default:
+                alert('an sai phim roi');
         }
     }
 </script>
