@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sự kiện chuột</title>
+
+</head>
+<body>
+
+<img src="img/ball.jpeg" height="100" width="120" id="myImage"> <br>
+<button type="button" style="position: absolute;top: 300px;left: 100px" id="btn" onclick="moveMouse()">Click me</button>
+<script>
+    let imgObj = document.getElementById('myImage');
+
+    function MyMouse() {
+        imgObj.style.position = 'relative';
+        imgObj.style.left = '0px';
+    }
+
+    function moveMouse() {
+        imgObj.style.left = parseInt(imgObj.style.left) - 10 + 'px';
+    }
+
+    window.onload = MyMouse();
+</script>
+</body>
+</html>
