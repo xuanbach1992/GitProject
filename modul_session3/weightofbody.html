@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cân nặng của cơ thể</title>
+</head>
+<body>
+<script>
+    let weightOfBody = +(prompt('Nhập cân nặng của bạn(theo kg)', '60'));
+    let heightOfBody = +(prompt('Nhập chiều cao của bạn, tính theo m', '1.74'));
+    let BMI = weightOfBody / heightOfBody;
+    if (BMI < 18) {
+        alert("Bạn hơi thiếu cân");
+    } else if (BMI < 25.0) {
+        alert("bình thường ");
+    } else if (BMI < 30.0) {
+        alert("Bạn thừa cân");
+    } else {
+        alert("Bạn đang quá mập");
+    }
+</script>
+</body>
+</html>
