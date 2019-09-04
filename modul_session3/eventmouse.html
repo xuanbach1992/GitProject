@@ -8,17 +8,39 @@
 <body>
 
 <img src="img/ball.jpeg" height="100" width="120" id="myImage"> <br>
-<button type="button" style="position: absolute;top: 300px;left: 100px" id="btn" onclick="moveMouse()">Click me</button>
+<button type="button" style="position: absolute;top: 300px;left: 100px" id="btn" onclick="moveMouseLeft()">Left</button>
+<br>
+<button type="button" style="position: absolute;top: 350px;left: 100px" id="btn" onclick="moveMouseRight()">Right
+</button>
+<br>
+<button type="button" style="position: absolute;top: 450px;left: 100px" id="btn" onclick="moveMouseUp()">Up</button>
+<br>
+<button type="button" style="position: absolute;top: 500px;left: 100px" id="btn" onclick="moveMouseDown()">Down</button>
 <script>
     let imgObj = document.getElementById('myImage');
 
     function MyMouse() {
         imgObj.style.position = 'relative';
-        imgObj.style.left = '0px';
+        imgObj.style.left = '100px';
+        imgObj.style.top = '100px';
     }
 
-    function moveMouse() {
-        imgObj.style.left = parseInt(imgObj.style.left) - 10 + 'px';
+    let move = 10;
+
+    function moveMouseLeft() {
+        imgObj.style.left = parseInt(imgObj.style.left) - move + 'px';
+    }
+
+    function moveMouseRight() {
+        imgObj.style.left = parseInt(imgObj.style.left) + move + 'px';
+    }
+
+    function moveMouseUp() {
+        imgObj.style.top = parseInt(imgObj.style.top) - move + 'px';
+    }
+
+    function moveMouseDown() {
+        imgObj.style.top = parseInt(imgObj.style.top) + move + 'px';
     }
 
     window.onload = MyMouse();
