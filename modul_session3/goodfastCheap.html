@@ -5,19 +5,52 @@
     <title>GoodFastCheap</title>
 </head>
 <body>
-<input type="checkbox" value="Good" id="good" onclick="ChooseTwoValue()"><br>
-<input type="checkbox" value="Fast" id="fast" onclick="ChooseTwoValue()"><br>
-<input type="checkbox" value="Cheap" id="cheap" onclick="ChooseTwoValue()">
+<input type="checkbox" value="good" id="good" onclick="ChooseTwoValue(this.value)"><br>
+<input type="checkbox" value="gast" id="fast" onclick="ChooseTwoValue(this.value)"><br>
+<input type="checkbox" value="cheap" id="cheap" onclick="ChooseTwoValue(this.value)">
 <script>
-    function ChooseTwoValue() {
+    function ChooseTwoValue(val) {
         let good = document.getElementById('good');
         let fast = document.getElementById('fast');
         let cheap = document.getElementById('cheap');
-
-        if (good.checked && fast.checked && cheap.checked) {
-            good.checked = false;
-        } else if ((fast.checked && !cheap.checked)||(!fast.checked && cheap.checked)) {
-            good.checked = true;
+        switch (val) {
+            case "good":
+                if (fast.checked && good.checked) {
+                    cheap.checked = false;
+                }
+                else if (cheap.checked && good.checked) {
+                    fast.checked = false;
+                }
+                else if (fast.checked && cheap.checked) {
+                    good.checked = false;
+                }
+                break;
+            case "fast":
+                if (fast.checked && good.checked) {
+                    cheap.checked = false;
+                }
+                else if (cheap.checked && fast.checked) {
+                    good.checked = false;
+                }
+                else if (cheap.checked && good.checked) {
+                    fast.checked = false;
+                }
+                break;
+            case "cheap" :
+                if (cheap.checked && good.checked) {
+                    fast.checked = false;
+                }
+                else if (cheap.checked && fast.checked) {
+                    good.checked = false;
+                }
+                else if (good.checked && fast.checked) {
+                    cheap.checked = false;
+                }
+                break;
+            // if (good.checked && fast.checked && cheap.checked) {
+            //     good.checked = false;
+            // } else if ((fast.checked && !cheap.checked)||(!fast.checked && cheap.checked)) {
+            //     good.checked = true;
         // }if ((good.checked && !fast.checked||(good.checked &&cheap.checked)){
         //     cheap.checked=false;
         }

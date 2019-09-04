@@ -6,60 +6,63 @@
 </head>
 <body>
 <table>
-    <tr colspan="4"><input type="text" id="num_input1"  disabled >
+    <tr>
+        <td colspan="4"><input id="input_num" disabled></td>
+    </tr>
+    <tr>
         <td>
-            <button type="button" value="7" class="btn">7</button>
+            <button type="button" value="7" onclick="ClickButton('7')">7</button>
         </td>
         <td>
-            <button type="button" value="8" class="btn">8</button>
+            <button type="button" value="8" onclick="ClickButton('8')">8</button>
         </td>
         <td>
-            <button type="button" value="9" class="btn">9</button>
+            <button type="button" value="9" onclick="ClickButton('9')">9</button>
         </td>
         <td>
-            <button type="button" value="+" class="toanTu" name="toanTu">+</button>
+            <button type="button" value="+" onclick="ClickButtonOperator('+')">+</button>
         </td>
     </tr>
     <tr>
         <td>
-            <button type="button" value="4" class="btn">4</button>
+            <button type="button" value="4" onclick="ClickButton('4')">4</button>
         </td>
         <td>
-            <button type="button" value="5" class="btn">5</button>
+            <button type="button" value="5" onclick="ClickButton('5')">5</button>
         </td>
         <td>
-            <button type="button" value="6" class="btn">6</button>
+            <button type="button" value="6" onclick="ClickButton('6')">6</button>
         </td>
         <td>
-            <button type="button" value="-" class="toanTu" name="toanTu">-</button>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <button type="button" value="1" class="btn">1</button>
-        </td>
-        <td>
-            <button type="button" value="2" class="btn">2</button>
-        </td>
-        <td>
-            <button type="button" value="3" class="btn">3</button>
-        </td>
-        <td>
-            <button type="button" value="*" class="toanTu"name="toanTu">*</button>
+            <button type="button" value="-" onclick="ClickButtonOperator('-')">-</button>
         </td>
     </tr>
     <tr>
         <td>
-            <button type="button" value="0" class="btn">0</button>
+            <button type="button" value="1" onclick="ClickButton('1')">1</button>
         </td>
         <td>
-            <button type="button" value="." class="btn">.</button>
+            <button type="button" value="2" onclick="ClickButton('2')">2</button>
         </td>
         <td>
-            <button type="button"  class="btnEqual">=</button>
+            <button type="button" value="3" onclick="ClickButton('3')">3</button>
         </td>
         <td>
-            <button type="button" value="/" class="toanTu" name="toanTu">:</button>
+            <button type="button" value="*" onclick="ClickButtonOperator('*')">*</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button type="button" value="0" onclick="ClickButton('0')" class="btn">0</button>
+        </td>
+        <td>
+            <button type="button" value="." onclick="ClickButton('.')" class="btn">.</button>
+        </td>
+        <td>
+            <button type="button" class="btnEqual" onclick="Result()">=</button>
+        </td>
+        <td>
+            <button type="button" value="/" onclick="ClickButtonOperator('/')">:</button>
         </td>
     </tr>
 </table>
