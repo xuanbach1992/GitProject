@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập cấu trúc điều kiện 02</title>
+</head>
+<body>
+<input type="button" value="Bai 1" onclick="bai1()"><br>
+<input type="button" value="Bai 2" onclick="bai2()"><br>
+<input type="button" value="Bai 3" onclick="bai3()"><br>
+<input type="button" value="Bai 4" onclick="bai4()"><br>
+<input type="button" value="Bai 5" onclick="bai5()"><br>
+<input type="button" value="Bai 6" onclick="bai6()"><br>
+<input type="button" value="Bai 7" onclick="bai7()"><br>
+<input type="button" value="Bai 8" onclick="bai8()"><br>
+<input type="button" value="Bai 9" onclick="bai9()"><br>
+<input type="button" value="Bai 10" onclick="bai10()"><br>
+<input type="button" value="Bai 11" onclick="bai11()"><br>
+<input type="button" value="Bai 12" onclick="bai12()"><br>
+<script>
+    function bai1() {
+        let TempC=+(prompt('Nhap nhiet do c',''));
+       let TempF= (TempC*1.8)+32;
+       alert("nhiet do F la"+TempF);
+    }
+    function bai2() {
+        let lengthMeter=+(prompt('Nhap chieu dai theo met',''));
+        let convert= 3.2808;
+        let lengthFeet= lengthMeter*convert;
+        alert('chieu dai tinh theo feet '+ lengthFeet);
+    }
+    function bai3() {
+        let cont= prompt('Nhap do dai 1 canh cua hinh vuong','');
+        let area=cont*cont;
+        alert('Dien tich la '+ area);
+    }
+    function bai4() {
+        let length=+(prompt('Nhap chieu dai',""));
+        let wigth= +(prompt('Nhap chieu rong',""));
+        let area=(length+wigth)*2;
+        alert("Dien tich hinh chu nhat voi do dai 2 canh "+ length+" va "+ wigth+" la "+ area );
+    }
+    function bai5(){
+
+    }
+</script>
+</body>
+</html>
