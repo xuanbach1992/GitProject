@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="demo()">
+<button onclick="Bai1()">Nhap so</button>
+<script>
+    let num;
+
+    function Bai1() {
+        let total = null;
+        do {
+            num = +(prompt("nhap so tu ban phim", ""));
+            total += num;
+        } while (num != -1);
+        alert("tong cac so da nhap la " + total);
+
+    }
+
+    function demo() {
+        window.addEventListener('keydown', IsAllowNumber);
+    }
+
+    function IsAllowNumber(value) {
+        console.log(value);
+        // if (value.which>="96"&&value.which<="105"|| value.which=="189"){
+        //
+        // }
+    }
+
+</script>
+</body>
+</html>
