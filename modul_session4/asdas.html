@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var i,n, nt=1;
+    function nguyento(x){
+            for(i=2;i<=Math.sqrt(x);i++){
+                if(x%i==0){nt=0; break;}
+            }
+        return nt;
+    }
+    n=prompt("Nhap gia tri n:");
+
+    if(nguyento(n)==1) document.write(n + " la so nguyen to")
+    else document.write(n + " KHONG la so nguyen to")
+</script>
+</body>
+</html>
