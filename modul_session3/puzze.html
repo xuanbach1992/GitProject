@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>puzzle game</title>
+</head>
+<body>
+<img src="1.jpg" id="1" alt="1" style="left: 10px;top: 10px" onclick="doianh(this.id)"/>
+<img src="2.jpg" id="2" alt="2" style="left: 10px;top: 10px" onclick="doianh(this.id)"/>
+<img src="3.jpg" id="3" alt="3" style="left: 10px;top: 10px" onclick="doianh(this.id)"/>
+<img src="4.jpg" id="4" alt="4" style="left: 10px;top: 10px" onclick="doianh(this.id)"/>
+<script>
+    function doianh(id) {
+        let img = document.getElementById(id);
+        if (img.alt == "1") {
+            img.alt = "2";
+        } else if (img.alt == "2") {
+            img.alt = "3";
+        } else if (img.alt == "3") {
+            img.alt = "4"
+        } else {
+            img.alt = 1;
+        }
+        img.src = id + ".ipg";
+    }
+</script>
+</body>
+</html>
