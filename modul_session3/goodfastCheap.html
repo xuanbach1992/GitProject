@@ -6,7 +6,7 @@
 </head>
 <body>
 <input type="checkbox" value="good" id="good" onclick="ChooseTwoValue(this.value)"><br>
-<input type="checkbox" value="gast" id="fast" onclick="ChooseTwoValue(this.value)"><br>
+<input type="checkbox" value="fast" id="fast" onclick="ChooseTwoValue(this.value)"><br>
 <input type="checkbox" value="cheap" id="cheap" onclick="ChooseTwoValue(this.value)">
 <script>
     function ChooseTwoValue(val) {
@@ -26,14 +26,12 @@
                 }
                 break;
             case "fast":
-                if (fast.checked && good.checked) {
-                    cheap.checked = false;
-                }
-                else if (cheap.checked && fast.checked) {
+                if (fast.checked && cheap.checked) {
                     good.checked = false;
-                }
-                else if (cheap.checked && good.checked) {
+                } else if (cheap.checked && good.checked) {
                     fast.checked = false;
+                } else if (good.checked && fast.checked) {
+                    cheap.checked = false;
                 }
                 break;
             case "cheap" :
@@ -47,12 +45,6 @@
                     cheap.checked = false;
                 }
                 break;
-            // if (good.checked && fast.checked && cheap.checked) {
-            //     good.checked = false;
-            // } else if ((fast.checked && !cheap.checked)||(!fast.checked && cheap.checked)) {
-            //     good.checked = true;
-        // }if ((good.checked && !fast.checked||(good.checked &&cheap.checked)){
-        //     cheap.checked=false;
         }
     }
 </script>
