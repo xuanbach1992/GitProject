@@ -4,6 +4,8 @@ let dem = 0;
 function checkPrimer(val) {
     if (val == 2) {
         return true;
+    } else if (val < 2) {
+        return false;
     } else if (val % 2 == 0) {
         return false;
     } else {
