@@ -104,3 +104,33 @@ function Exam8() {
         }
     }
 }
+function Exam9() {
+    let n = 5;
+    for (let i = 0; i < n; i++) {
+        for (let j = 0; j <= i; j++) {
+            document.write("* ");
+        }
+        document.write("<br>");
+    }
+    document.write("<br>");
+
+    for (let i = 0; i < n; i++) {
+        for (let j = n; j > i; j--) {
+            document.write("* ");
+        }
+        document.write("<br>");
+    }
+    document.write("<br>");
+
+
+    for (let i = 0; i < n; i++) {
+        for (let j = n; j > i; j--) {
+            document.write("*git ");
+            for (let k = j-i; k <= 1; k++) {
+                document.write("a");
+            }
+        }
+        document.write("<br>")
+
+    }
+}
