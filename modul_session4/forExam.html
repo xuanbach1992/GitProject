@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="demo"></p>
+<input type="button" onclick="ClickMe()" value="ClickMe">
+<script>
+    let text = '';
+    let i;
+    for (i = 0; i < 5; i++) {
+        text += "The number is " + i + "<br>";
+    }
+    document.getElementById("demo").innerHTML = text;
+
+    function ClickMe() {
+        let num = +prompt("nhap so tu ban phim");
+        let total = 0;
+        let index;
+        for (index = 0; index <= num; index++) {
+            total = total + index;
+        }
+        alert(total);
+    }
+</script>
+</body>
+</html>
