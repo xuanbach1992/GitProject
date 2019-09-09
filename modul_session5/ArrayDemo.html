@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ArrayDemo</title>
+</head>
+<body>
+<input id="txtValue" type="text">
+<input id="btnAdd" onclick="add_element_to_array();" type="button" value="Add">
+<input id="btnDisplay" onclick="display_array();" type="button" value="Display">
+<div id="result"></div>
+<script>
+    let index;
+    index = 0;
+    let array = [];
+    let input = document.getElementById("txtValue");
+
+    function add_element_to_array() {
+        let x=input.value;
+        array.push(x);
+        // alert("Element: " + array[index] + " Added at index " + index);
+        index++;
+
+        input.value = "";
+        input.focus();
+    }
+
+    function display_array() {
+        let output = "<hr/>";
+        for (let i = 0; i < array.length; i++) {
+            output += `phan tu ${i}=${array[i]} <hr/>`;
+        }
+        document.getElementById("result").innerHTML = output;
+    }
+</script>
+</body>
+</html>

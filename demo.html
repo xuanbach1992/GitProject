@@ -24,80 +24,20 @@
 <p id="demo"></p>
 
 <script>
-    var str1;
-    function up(){
-        str1= document.getElementById('text_box').value;
-        var ar = [];
-        for (var i = 0; i < str1.length; i++) {
-            ar.push(str1.charCodeAt(i));
-        }
-        var array1 = ar.sort(function(a, b){
-            return a-b
-        });
-        var array2 = [];
-        for (var i = 0; i < array1.length; i++) {
-            array2.push(String.fromCharCode(array1[i]));
-        }
-        for (var i = 0; i < array2.length; i++) {
-            var print =array2.join('')
-            document.getElementById('demo').innerHTML="<h1><b>"+print+"</b></h1>";// in trên html
-            document.getElementById('ketqua1').value=print; //textbox
-        }
-    }
-    function down(){
-        str1= document.getElementById('text_box').value;
-        var ar = [];
-        for (var i = 0; i < str1.length; i++) {
-            ar.push(str1.charCodeAt(i));
-        }
-        var array1 = ar.sort(function(a, b){
-            return b-a
-        });
-        var array2 = [];
-        for (var i = 0; i < array1.length; i++) {
-            array2.push(String.fromCharCode(array1[i]));
-        }
-        for (var i = 0; i < array2.length; i++) {
-            var print =array2.join('')
-            document.getElementById('demo').innerHTML="<h1><b>"+print+"</b></h1>";// in trên html
-            document.getElementById('ketqua1').value=print; //textbox
-        }
-    }
-    function myFunction() {
-        var isNumber =  document.getElementById("IsNumber").checked;
-        var isSpecial =  document.getElementById("IsSpecial").checked;
-        var evt = window.event;
-        /*if (theEvent.type === 'paste') {
-          key = event.clipboardData.getData('text/plain');//web api
-        } else {*/
-        var key = evt.keyCode || evt.which; //trả về keyCode của kí tự theo event Onkeypress. DOM event obj
-        key = String.fromCharCode(key);// Chuyển đổi số  thành ký tự theo mã unicode
-        //alert(theEvent);
-        //alert(theEvent.type);
-        var count1 = /[^0-9]/;
-        var count2 = /[0-9A-Za-z]/;//or [0-9]|[a-z]|[A-Z]
-        //var count3 = /[a-z]|[A-Z]/;
-        if(isNumber){
-            if(count1.test(key) ) {
-                evt.returnValue = false;
-                //alert(evt.returnValue);//hanh đọng mặc định đc chặn hay không
-                if(evt.preventDefault) evt.preventDefault();//huy bo,run preventDefault
-            }
-        }/*
-		else {
-			if (count3.test(key) ) {
-			//	evt.returnValue = false;
-				if(evt.preventDefault) evt.preventDefault();
-			}
-		}*/
-        if (isSpecial) {
-            if (count2.test(key)){
-                evt.returnValue = false;
-                if(evt.preventDefault) evt.preventDefault();
-            }
+    var array = [5, 3, 4, 1];
 
+    for (var x = 0; x < array.length; x++) {
+        for (var y = 1; y < array.length - 1; y++) {
+            let z=array[x]- array[y]
+            if (z>0) {
+                var temp = array[y];
+                array[y] = array[x];
+                array[x] = temp;
+            }
         }
     }
+
+    console.log(array);
 </script>
 </body>
 </html></title>
