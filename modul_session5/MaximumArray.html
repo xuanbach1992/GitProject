@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MaximunArray</title>
+</head>
+<body>
+<label>Chiều dài</label>
+<input id="InputCount" type="number"value="10"><br>
+<label>Giới hạn độ số</label>
+<input id="InputMaximun" type="numbInputCounter" value="100"><br>
+<button id="BtnCreat" onclick="CreatArray()">Creat</button>
+<button id="maximun" onclick="max()">Max</button>
+<code id="print"></code>
+<script>
+    let Count = document.getElementById('InputCount');
+    let Maximun = document.getElementById('InputMaximun');
+    let arr;
+
+    function CreatArray() {
+        arr = [];
+        for (let i = 0; i < Count.value ; i++) {
+            arr[i] = Math.ceil(Math.random() * Maximun.value);
+        }
+        document.getElementById('print').innerHTML += `[${arr}]`
+
+    }
+    function max() {
+        let max = arr[0];
+        let index = 0;
+        for (let i = 1; i < arr.length; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+                index = i;
+            }
+        }
+        alert(`phan tu lon nhat ${max} tai vi tri ${index}`);
+    }
+</script>
+</body>
+</html>
