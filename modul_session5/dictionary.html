@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dictionary</title>
+</head>
+<body>
+<form>
+    <fieldset>
+        <legend>Dictionary</legend>
+        <input id="dictionary" type="text">
+        <button onclick="translateText()" type="button">Translate</button>
+        <button type="reset">Reset</button>
+    </fieldset>
+</form>
+<script>
+    let Array1 = ['1', '2', '3', '4', '5', '6', '7', '8', '9'];
+    let Array2 = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
+    let trans = document.getElementById('dictionary');
+    function translateText() {
+        for (let i = 0; i < Array1.length - 1; i++) {
+            if (trans.value === Array1[i]) {
+                trans.value = Array2[i];
+            } else if (trans.value === Array2[i]) {
+                trans.value = Array1[i];
+            }
+        }
+    }
+</script>
+</body>
+</html>
