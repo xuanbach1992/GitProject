@@ -41,14 +41,14 @@
 
     function ReverseValue() {
         let first = 0;
-        let last = arr.length - 1;
-        for (first; first < arr.length - 1; first++) {
-            for (last; last > first; last--) {
+        let last = arr.length - 1 ;
+        while (first < last) {
                 let tepm = arr[first];
                 arr[first] = arr[last];
                 arr[last] = tepm;
+            first++;
+            last--;
             }
-        }
         document.getElementById('print').innerHTML = `[${arr}]`;
     }
 </script>
