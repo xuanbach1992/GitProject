@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cờ Caro</title>
+</head>
+<body>
+<code id="carogame"></code>
+<button type="button" onclick="CreateBoard()">Creat</button>
+<button type="button" onclick="ChangeValue()">Change Value</button>
+<script>
+    let caro = document.getElementById('carogame');
+    let board = [];
+    let data = "";
+
+    function CreateBoard() {
+        for (let i = 0; i < 5; i++) {
+            board[i] = ['0', '0', '0', '0', '0'];
+        }
+        for (let j = 0; j < 5; j++) {
+            data += "<br>";
+            for (let i = 0; i < 5; i++) {
+                data += board[i][j] + "  ";
+            }
+        }
+        caro.innerHTML = data;
+    }
+
+
+    function ChangeValue() {
+        let RowsChange = Number(prompt("Nhập vào vị trí hàng muốn chọn: "));
+        let ColsChange = Number(prompt("Nhập vào vị trí cột muốn chọn: "));
+
+        data = "";
+        board[RowsChange][ColsChange] = "x";
+        for (let i = 0; i < 5; i++) {
+            data = data + "<br>";
+            for (let j = 0; j < 5; j++) {
+                data += board[i][j] + "  ";
+            }
+        }
+        caro.innerHTML = "<hr>" + data;
+    }
+</script>
+</body>
+</html>
