@@ -5,23 +5,39 @@
     <title>puzzle game</title>
 </head>
 <body>
-<img src="1.jpg" id="1" alt="1" style="left: 10px;top: 10px" onclick="doianh(this.id)"/>
-<img src="2.jpg" id="2" alt="2" style="left: 10px;top: 10px" onclick="doianh(this.id)"/>
-<img src="3.jpg" id="3" alt="3" style="left: 10px;top: 10px" onclick="doianh(this.id)"/>
-<img src="4.jpg" id="4" alt="4" style="left: 10px;top: 10px" onclick="doianh(this.id)"/>
+
+<img alt="1" height="87" id="picture_1" onclick="doianh(this.id)" src="img/a1.jpg" width="183"/><br>
+<img alt="2" height="87" id="picture_2" onclick="doianh(this.id)" src="img/a2.jpg" width="183"/><br>
+<img alt="3" height="87" id="picture_3" onclick="doianh(this.id)" src="img/a3.jpg" width="183"/>
 <script>
     function doianh(id) {
         let img = document.getElementById(id);
-        if (img.alt == "1") {
-            img.alt = "2";
-        } else if (img.alt == "2") {
-            img.alt = "3";
-        } else if (img.alt == "3") {
-            img.alt = "4"
-        } else {
-            img.alt = 1;
+        switch (img.alt){
+            case "1":
+                img.alt = "4";
+                img.src = "img/b11.jpg";
+                break;
+            case "2":
+                img.alt = "5";
+                img.src = "img/b12.jpg";
+                break;
+            case "3":
+                img.alt = "6";
+                img.src = "img/b13.jpg";
+                break;
+            case "4":
+                img.alt = "1";
+                img.src = "img/a11.jpg";
+                break;
+            case "5":
+                img.alt = "2";
+                img.src = "img/a12.jpg";
+                break;
+            case "6":
+                img.alt = "3";
+                img.src = "img/a13.jpg";
+                break;
         }
-        img.src = id + ".ipg";
     }
 </script>
 </body>
