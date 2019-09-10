@@ -6,7 +6,7 @@
         let arrayString = ["","H", "ì", "n", "h", " ", "N", "h", "ư", " ", "C", "ó", " ", "G", "ì", " ", "Đ", "ó", " ", "S", "a", "i", " ", "S", "a", "i", "!", "!", "!"];
         let n = "";
 // array[0] ko chay
-        function faking() {
+        function demoEventTroll() {
             let stringInput = document.getElementById('text_are');
             let stringValue=stringInput.value;
             if (stringValue.length > 0) {
@@ -20,7 +20,7 @@
             }
             document.getElementById('text_are').value = n;
             n = "";
-            setTimeout("faking()", 1000);
+            setTimeout("demoEventTroll()", 1000);
         }
     </script>
 </head>

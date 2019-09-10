@@ -10,7 +10,8 @@
 <label>Giới hạn độ số</label>
 <input id="InputMaximun" type="numbInputCounter" value="100"><br>
 <button id="BtnCreat" onclick="CreatArray()">Creat</button>
-<button id="maximun" onclick="max()">Max</button>
+<button id="maximun" onclick="MaximunValue()">Max</button>
+<button id="reverse" onclick="ReverseValue()">Reverse</button>
 <code id="print"></code>
 <script>
     let Count = document.getElementById('InputCount');
@@ -22,10 +23,11 @@
         for (let i = 0; i < Count.value ; i++) {
             arr[i] = Math.ceil(Math.random() * Maximun.value);
         }
-        document.getElementById('print').innerHTML += `[${arr}]`
+        document.getElementById('print').innerHTML += `[${arr}]`;
 
     }
-    function max() {
+
+    function MaximunValue() {
         let max = arr[0];
         let index = 0;
         for (let i = 1; i < arr.length; i++) {
@@ -35,6 +37,19 @@
             }
         }
         alert(`phan tu lon nhat ${max} tai vi tri ${index}`);
+    }
+
+    function ReverseValue() {
+        let first = 0;
+        let last = arr.length - 1;
+        for (first; first < arr.length - 1; first++) {
+            for (last; last > first; last--) {
+                let tepm = arr[first];
+                arr[first] = arr[last];
+                arr[last] = tepm;
+            }
+        }
+        document.getElementById('print').innerHTML = `[${arr}]`;
     }
 </script>
 </body>
