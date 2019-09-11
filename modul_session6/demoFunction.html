@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<body>
+<fieldset>
+    <legend>chuyen C sang F</legend>
+    <input id="idConvertTemp" placeholder="Nhap do C" type="text">
+    <button onclick="convertTemp(document.getElementById('idConvertTemp').value)" type="button">Convert</button>
+</fieldset>
+<fieldset>
+    <legend>So nguyen to</legend>
+    <input id="idNumPrime" placeholder="nhap so kiem tra"
+           type="text">
+    <button onclick="check(document.getElementById('idNumPrime').value)" type="button">Check</button>
+    <br>
+    <code id="idPrimeNumber"></code>
+</fieldset>
+
+<p id="demo"></p>
+
+<script>
+    function convertTemp(valTemp) {
+        // valTemp= parseFloat(valTemp);
+        document.getElementById("idConvertTemp").value = valTemp * 1.8 + 32;
+    }
+
+    function check(val) {
+        if (primerNumber(val)) {
+            alert("la so nguyen to");
+        } else {
+            alert(" KHONG la so nguyen to");
+        }
+    }
+
+    function primerNumber(numCheck) {
+        // numCheck = parseInt(numCheck);
+        // if (numCheck == 2) {
+        //     return true;
+        // } else if (numCheck < 2) {
+        //     return false;
+        // } else if (numCheck % 2 == 0) {
+        //     return false;
+        // } else {
+        for (let i = 2; i < Math.sqrt(numCheck); i++) {
+            if (numCheck % i == 0) {
+                return false;
+                break;
+            }
+        }
+        return true;
+    }
+</script>
+</body>
+</html>

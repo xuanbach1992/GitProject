@@ -4,6 +4,7 @@ let Max = 52;
 let scorePlay1;
 let scorePlay2;
 let print = document.getElementById('hightScore');
+
 function CreatArrayGame() {
 
     GameArray = [];
