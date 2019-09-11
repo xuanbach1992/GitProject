@@ -6,6 +6,7 @@
     <input id="idConvertTemp" placeholder="Nhap do C" type="text">
     <button onclick="convertTemp(document.getElementById('idConvertTemp').value)" type="button">Convert</button>
 </fieldset>
+
 <fieldset>
     <legend>So nguyen to</legend>
     <input id="idNumPrime" placeholder="nhap so kiem tra"
@@ -15,7 +16,10 @@
     <code id="idPrimeNumber"></code>
 </fieldset>
 
-<p id="demo"></p>
+<fieldset>
+    <legend>Minimun in array</legend>
+    <button type="button"></button>
+</fieldset>
 
 <script>
     function convertTemp(valTemp) {
@@ -47,6 +51,28 @@
             }
         }
         return true;
+    }
+
+    let arrTest1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -1];
+    let arrTest2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -10, -1];
+    let arrTest3 = [];
+    let b=findMin(arrTest1);
+
+    console.log(arrTest1[b]);
+
+    function findMin(arr) {
+        if (arr.length == 0) {
+            return -1;
+        }
+        let min = arr[0];
+        let index = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (min >   arr[i]) {
+                min = arr[i];
+                index = i;
+            }
+        }
+        return index;
     }
 </script>
 </body>
