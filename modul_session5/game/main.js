@@ -1,7 +1,9 @@
 let GameArray;
 let PlayArr1, PlayArr2;
 let Max = 52;
-
+let scorePlay1;
+let scorePlay2;
+let print = document.getElementById('hightScore');
 function CreatArrayGame() {
 
     GameArray = [];
@@ -10,6 +12,10 @@ function CreatArrayGame() {
     }
     document.getElementById('CreatArrId').innerHTML = "";
     document.getElementById('CreatArrId').innerHTML = `[${GameArray}]`;
+    creatPlayer();
+}
+
+function creatPlayer() {
     PlayArr1 = [];
     PlayArr2 = [];
     let randomArrayElement = 0;
@@ -27,8 +33,8 @@ function CreatArrayGame() {
 }
 
 function winGame() {
-    let scorePlay1 = 0;
-    let scorePlay2 = 0;
+    print.innerHTML = "";
+    scorePlay1 = scorePlay2 = 0;
     for (let i = 0; i < PlayArr1.length; i++) {
         if (PlayArr1[i] > PlayArr2[i]) {
             scorePlay1++;
@@ -36,14 +42,17 @@ function winGame() {
             scorePlay2++;
         }
     }
-        document.getElementById('hightScore').innerHTML = "";
+    resuilt();
+}
+
+function resuilt() {
+
     if (scorePlay1 > scorePlay2) {
-        document.getElementById('hightScore').innerHTML = `Player 1 voi so diem ${scorePlay1}`;
-    } else if (scorePlay1 == scorePlay2) {
-        document.getElementById('hightScore').innerHTML = "Hue ca lang";
+        print.innerHTML = "Player 1 voi so diem " + scorePlay1;
+    } else if (scorePlay1 === scorePlay2) {
+        print.innerHTML = "Hue ca lang";
     } else {
-        document.getElementById('hightScore').innerHTML = `Player 2 voi so diem ${scorePlay2}`;
+        print.innerHTML = "Player 2 voi so diem " + scorePlay2;
     }
 
 }
-
