@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+
+<fieldset>
+    <legend>Square of Number input</legend>
+    <button onclick="showSquareNumber()" type="button">Ex 1</button>
+</fieldset>
+
+<fieldset>
+    <legend>Chu vi va dien tich hinh tron</legend>
+    <button onclick="borderCircle(Number(prompt('ban kinh la : ')))" type="button">Border</button>
+    <button onclick="areaCircle(Number(prompt('ban kinh laf : ')))" type="button">Area</button>
+    <input id="idResult" placeholder="result" type="text">
+</fieldset>
+
+<fieldset>
+    <legend> factorial of Number input</legend>
+    <input id="idNumberInput" oninput="factorialNumber(+(document.getElementById('idNumberInput').value))" type="text">
+    <input disabled id="idNumberOutput" type="text">
+</fieldset>
+
+<form>
+    <fieldset>
+        <legend>Is Number</legend>
+        <input id="idIsNum" oninput="isNum(document.getElementById('idIsNum').value)" onkeyup="deleteValue()" type="text">
+        <p id="idDisplay"></p>
+       <button type="reset">reset</button>
+    </fieldset>
+</form>
+
+<fieldset>
+    <legend>Exercise 5</legend>
+    <button onclick="findMinNumberInput()">Minium Number</button>
+</fieldset>
+
+<fieldset>
+    <legend>Exercise 7</legend>
+    <button onclick="inputNumberToSwap()">Swap Number</button>
+</fieldset>
+
+<fieldset>
+    <legend>Exercise 8</legend>
+    <input type="text" id="idArrayInput" placeholder="nhap mang" oninput="addStringIntoArrayAndSwap()">
+    <button onclick="displayNewArray()">Display Array</button>
+
+    <code id="id_display_array"></code><br>
+    <label>Exercise 9</label>
+    <button onclick="characterOfAppearances();printIntoIndex()">Character Of Appearances In Array</button>
+    <code id="id_display_number_char"></code>
+</fieldset>
+
+
+
+<script src="mainBlueTraning2.js"></script>
+</body>
+</html>
