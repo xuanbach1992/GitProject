@@ -43,7 +43,7 @@ function addNumberTotal() {
     num = addNumbers(1);
 }
 
-function getNameStarInput(stringInput) {
+function getNameStarInput() {
     stringInput = document.getElementById('idStarInput').value;
     return stringInput;
 
@@ -56,9 +56,7 @@ function findStar() {
     for (let i = 0; i < arr_star.length; i++) {
         if (arr_star[i] === inputNameStar) {
             alert("ngôi sao: " + arr_star[i] + " thuộc chòm sao: " + arr_constellation[i]);
-            break;
         }
-        alert("khong phai ten ngoi sao");
-        break;
     }
+    alert("khong phai ten ngoi sao");
 }
