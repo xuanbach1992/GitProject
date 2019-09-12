@@ -52,9 +52,9 @@ function deleteValue() {
 }
 
 function findMinNumberInput() {
-    let number1 = +prompt('nhap so 1');
-    let number2 = +prompt('nhap so 2');
-    let number3 = +prompt('nhap so 3');
+    let number1 = getChar();
+    let number2 = getChar();
+    let number3 = getChar();
     let min = minNumber(number1, number2, number3);
     alert(min);
 }
@@ -62,10 +62,14 @@ function findMinNumberInput() {
 function minNumber(x, y, z) {
     let arr = [];
     arr.push(x, y, z);
-    let min = arr[0]
-    for (let i = 0; i < arr.length; i++) {
-        if (min > arr[i]) {
-            min = arr[i];
+    return minimumArray(arr);
+}
+
+function minimumArray(arrayArgs) {
+    let min = arrayArgs[0]
+    for (let i = 0; i < arrayArgs.length; i++) {
+        if (min > arrayArgs[i]) {
+            min = arrayArgs[i];
         }
     }
     return min;
@@ -80,8 +84,8 @@ function swapNum(a, b) {
 }
 
 function inputNumberToSwap() {
-    let number1 = +prompt('nhap so 1');
-    let number2 = +prompt('nhap so 2');
+    let number1 = getChar();
+    let number2 = getChar();
     return swapNum(number1, number2);
 }
 
@@ -99,7 +103,8 @@ function displayNewArray() {
 }
 
 function getChar() {
-    let num = window.prompt("nhap ki tu muon tra");
+    num = window.prompt("nhap ki tu so");
+    num=parseInt(num);
     return num;
 }
 
