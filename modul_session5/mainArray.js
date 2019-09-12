@@ -43,18 +43,12 @@ function NumberMedium() {
 }
 
 function SwapElement() {
-// let tepm;
-    let array4 = []
     for (let first =0,last = Arr.length-1; first < Arr.length/2; first++,last--) {
             let tepm = Arr[first];
            Arr[first] = Arr[last];
            Arr[last]=tepm;
     }
-    // for(let first =0,last = Arr.length-1; first < Arr.length; first++,last--){
-    //     array4[last]=Arr[first];
-    // }
     document.getElementById('demo4').innerHTML = `[${Arr}]`;
-    // document.getElementById('demo4').innerHTML = `[${array4}]`;
 }
 
 function NumberNegative() {
