@@ -45,8 +45,7 @@ function addNumberTotal() {
 
 function getNameStarInput() {
   let  stringInput = document.getElementById('idStarInput').value;
-    return stringInput;
-
+   return stringInput;
 }
 
 function findStar() {
