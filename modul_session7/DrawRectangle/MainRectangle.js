@@ -11,8 +11,6 @@ function Rectangle(width, height) {
     this.setHeight = function (height) {
         this.height = height;
     };
-    // this.getDrawElement=function () {
-    // };
     this.getWidth = function () {
         return this.width
     };
@@ -26,12 +24,8 @@ function Rectangle(width, height) {
         return this.width * this.height
     };
     this.drawRectangle = function () {
-        // let x = Math.floor(Math.random() * window.innerHeight);
-        // let y = Math.floor(Math.random() * window.innerWidth);
         drawElement.beginPath();
         drawElement.rect(100, 100, this.height, this.width);
-        // drawElement.fillStyle = "red"
-       // drawElement.fill();
         drawElement.lineWidth = 1;
         drawElement.strokeStyle = 'red';
         drawElement.stroke();
