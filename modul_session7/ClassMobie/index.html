@@ -5,9 +5,32 @@
     <title>Title</title>
 </head>
 <body>
+<fieldset>
+    <legend>Nokia</legend>
+    <input type="text" id="inputNokia" oninput="nokia.writeMsg(this.value)" placeholder="message...">
+    <button onclick="sendMsg(nokia,iphone)">Sent</button>
+    <br>
+    <label></label>
+    <p id="batteryNokia"></p><br>
+    <button type="button"  id="inboxPhone1" onclick="showBtn(this.id)">Inbox</button>
+    <p id="inboxNokia"></p><br>
+    <button type="button"  id="sentPhone1" onclick="showBtn(this.id)">Sent</button>
+    <p id="sentNokia"></p>
+</fieldset>
 
-<button type="button" onclick="addMobile()">Add Mobile</button>
-<p id="mobile"></p>
+<fieldset>
+    <legend>Iphone</legend>
+    <input type="text" id="inputIphone" oninput="iphone.writeMsg(this.value)" placeholder="message...">
+    <button onclick="sendMsg(iphone,nokia)">Sent</button>
+    <br>
+    <label></label>
+    <p id="batteryIphone"></p><br>
+    <button type="button"  id="inboxPhone2" onclick="showBtn(this.id)">InBox</button>
+    <p id="inboxIphone"></p><br>
+    <button type="button"  id="sentPhone2" onclick="showBtn(this.id)">Sent</button>
+    <p id="sentIphone"></p>
+</fieldset>
+
 <script src="MobilePhone.js"></script>
 </body>
 </html>
