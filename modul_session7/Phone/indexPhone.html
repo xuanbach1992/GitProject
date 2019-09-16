@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<fieldset>
+    <legend>Nokia x6.1</legend>
+    <label>Battery: </label><p id="idBatteryMyPhone"></p><br>
+    <input id="message_my_phone" oninput="addToDralt(this.id)" type="text">
+    <button id="myPhone" onclick="sendMessage(this.id)" type="button">Send</button>
+    <button id="myPhoneInbox" onclick="showMess(this.id)" type="button">Inbox</button>
+    <button id="myPhoneSent" onclick="showMess(this.id)" type="button">Send Inbox</button>
+    <button id="myPhoneDralt" onclick="showMess(this.id)" type="button">Dralt</button>
+    <br><p id="messageMyPhone"></p>
+
+</fieldset>
+
+<fieldset>
+    <legend>Iphone 11 Pro Max</legend>
+    <label>Battery: </label><p id="idBatteryYourPhone"></p><br>
+    <input id="message_your_phone"oninput="addToDralt(this.id)" type="text">
+    <button id="yourPhone" onclick="sendMessage(this.id)" type="button">Send</button>
+    <button id="yourPhoneInbox" onclick="showMess(this.id)" type="button">Inbox</button>
+    <button id="yourPhoneSent" onclick="showMess(this.id)" type="button">Send Inbox</button>
+    <button id="yourPhoneDralt" onclick="showMess(this.id)" type="button">Dralt</button>
+    <br><p id="messageYourPhone"></p>
+</fieldset>
+<script src="phoneClass.js"></script>
+</body>
+</html>
