@@ -1,16 +1,16 @@
 let Battery = function () {
 
     this.setEnergy = function (energy) {
-        this.energy = energy;
+        this._energy = energy;
     };
 
     this.getEnergy = function () {
-        return this.energy;
+        return this._energy;
     };
 
     this.decreaseEnergy = function () {
-        if (this.energy > 0) {
-            this.energy--;
+        if (this._energy > 0) {
+            this._energy--;
         }
     };
 };
