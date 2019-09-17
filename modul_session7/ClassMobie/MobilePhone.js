@@ -71,8 +71,29 @@ function showBtn(nameBtn) {
     }
 }
 
-function printMsg(arr) {
-    for (let i = 0; i <arr.length; i++) {
-        display += `${i + 1}||${arr[i]} <br/>`;
-    }
-}
+// function showBtn(nameBtn) {
+//     switch (nameBtn) {
+//         case "inboxPhone1":
+//             document.getElementById("inboxNokia").innerHTML = "";
+//             document.getElementById("inboxNokia").innerHTML = nokia.inbox+"</br>";
+//             break;
+//         case "sentPhone1":
+//             document.getElementById("sentNokia").innerHTML = "";
+//             document.getElementById("sentNokia").innerHTML += `${nokia.outbox} </br>`;
+//             break;
+//         case "inboxPhone2":
+//             document.getElementById("inboxIphone").innerHTML = "";
+//             document.getElementById("inboxIphone").innerHTML += `${iphone.inbox} </br>`;
+//             break;
+//         case "sentPhone2":
+//             document.getElementById("sentIphone").innerHTML = "";
+//             document.getElementById("sentIphone").innerHTML += `${iphone.outbox} </br>`;
+//             break;
+//     }
+// }
+//
+// function printMsg(arr) {
+//     for (let i = 0; i <arr.length; i++) {
+//         display += `${i + 1}||${arr[i]} <br/>`;
+//     }
+// }
