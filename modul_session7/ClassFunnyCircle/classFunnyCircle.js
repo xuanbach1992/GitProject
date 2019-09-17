@@ -1,5 +1,5 @@
 function Circle(x, y, radius,color,speed) {
-    this.canvas = document.getElementById('myCanvas');
+    this.canvas = document.getElementById('myCansvas');
     this.x = x;
     this.y = y;
     this.radius = radius;
