@@ -29,7 +29,6 @@ let FlashLamp = function () {
             console.log("tat den")
         }
     };
-
     this.turnOn = function () {
         this._status = true;
     };
