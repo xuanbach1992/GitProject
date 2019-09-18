@@ -30,8 +30,7 @@ let SwitchButton = function () {
         this.lamp = lamp1;
     };
     this.switchOff = function () {
-        this.sta
-<img height="353" src="imgs/1.png" width="259"/>tus = false;
+        this.status= false;
         this.lamp.turnOff();
         console.log("tat cong tac=> tat den");
         drawLamp(false);
