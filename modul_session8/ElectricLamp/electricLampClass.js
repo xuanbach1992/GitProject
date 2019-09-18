@@ -58,10 +58,10 @@ function drawLamp(status) {
     }
 }
 
-let bongden = new ElectricLamp(true);
+let bong1 = new ElectricLamp(true);
 let congtac = new SwitchButton(true);
 let bong2 = new ElectricLamp();
-bongden.turnOn();
+bong1.turnOn();
 // bongden.turnOff();
 congtac.connect(bong2);
 
