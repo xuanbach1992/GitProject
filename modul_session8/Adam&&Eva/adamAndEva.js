@@ -45,8 +45,13 @@ let Human = function (name, gender, weight) {
         }
     };
 };
-let tao = new Apple(0);
-let human = new Human("Bach", "nam", 60);
-human.eatApple(tao);
-console.log(human.getWeight());
+let tao = new Apple(10);
+let adam = new Human("Bach", "nam", 60);
+let eva=new Human("Trang","nu",45);
+adam.eatApple(tao);
+console.log(adam.getWeight());
+console.log(tao.getWeight());
+
+eva.eatApple(tao);
+console.log(eva.getWeight());
 console.log(tao.getWeight());
