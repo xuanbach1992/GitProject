@@ -36,7 +36,7 @@ let Human = function (name, gender, weight) {
     this.getGender = function () {
         return this.gender;
     };
-    this.eatApple = (tao) => {
+    this.eatApple =function (tao){
         if (tao._weight > 0) {
             this.weight++;
             tao.decrease();
@@ -44,7 +44,7 @@ let Human = function (name, gender, weight) {
             tao.decrease();
         }
     };
-}
+};
 let tao = new Apple(0);
 let human = new Human("Bach", "nam", 60);
 human.eatApple(tao);
