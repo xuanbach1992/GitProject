@@ -14,6 +14,7 @@ let ElectricLamp = function (status) {
         console.log("tat dien");
     };
 };
+
 let SwitchButton = function () {
 
     this.status = false;
@@ -60,11 +61,15 @@ function drawLamp(status) {
 let bongden = new ElectricLamp(true);
 let congtac = new SwitchButton(true);
 let bong2 = new ElectricLamp();
-// bongden.turnOn();
+bongden.turnOn();
 // bongden.turnOff();
 congtac.connect(bong2);
-// congtac.switchOn();
 
-congtac.switchOff();
-congtac.switchOn();
+function switchBtn() {
+    if (!congtac.status) {
+        congtac.switchOn();
+    } else {
+        congtac.switchOff();
+    }
+}
 
