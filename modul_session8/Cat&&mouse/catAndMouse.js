@@ -63,16 +63,22 @@ let Cat = function (name, weight, speed) {
     };
     this.eatMouse = function(rat) {
         this.weight = this.weight + rat._weight;
+        rat._status = false;
     };
     this.huntingMouse = (rat) => {
         if (this.speed > rat._speed) {
             console.log("bat dc chuot");
+            this.eatMouse(rat);
+        } else {
+            console.log("chay cham qua khong duoi dc");
         }
     };
 };
 
 let chuot = new Mouse("Jerry", 2, 4);
 let meo = new Cat("tom", 12, 6);
+chuot.setSpeed(10);
 meo.huntingMouse(chuot);
-meo.eatMouse(chuot);
-console.log(meo.weight);
+console.log(chuot.checkStatus());
+// meo.eatMouse(chuot);
+// console.log(meo.weight);
