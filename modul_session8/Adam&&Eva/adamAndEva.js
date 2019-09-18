@@ -7,19 +7,11 @@ let Apple = function (weight) {
     this.getWeight = function () {
         return this._weight;
     };
-
-    this.getEmpty = function () {
+    this.decrease = function () {
         if (this._weight > 0) {
-            return true;
-        } else {
-            return false;
-        }
-    };
-    this.getDecrease = function () {
-        if (this.getEmpty) {
             this._weight--;
         } else {
-            console.log("het tao roi gam cay ko?");
+            console.log("hết táo rồi còn vỏ ăn không ?");
         }
     };
 };
@@ -45,13 +37,15 @@ let Human = function (name, gender, weight) {
         return this.gender;
     };
     this.eatApple = (tao) => {
-        if (this.getEmpty) {
+        if (tao._weight > 0) {
             this.weight++;
-            tao.getDecrease();
+            tao.decrease();
+        } else {
+            tao.decrease();
         }
     };
 }
-let tao = new Apple(10);
+let tao = new Apple(0);
 let human = new Human("Bach", "nam", 60);
 human.eatApple(tao);
 console.log(human.getWeight());
