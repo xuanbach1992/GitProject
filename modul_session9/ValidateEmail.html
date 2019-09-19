@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Validate email</title>
+</head>
+<body>
+<script>
+    function validateEmail(str) {
+        let regexp = /^[a-z0-9aA-Z]+[0-9a-zA-Z]*@[A-Za-z0-9]+(\.[A-Za-z0-9]+)$/;
+        if (regexp.test(str)) {
+            alert("email")
+        } else {
+            alert("not Email");
+        }
+    }
+    let str1="a@gmail.com";
+    let str2="ab@yahoo.com";
+    let str3="abc@hotmail.com";
+    let str4="@gmail.com";
+    let str5="ab@gmail.";
+    validateEmail(str4);
+</script>
+</body>
+</html>
