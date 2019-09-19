@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Is check first key upper?</title>
+</head>
+<body>
+<script>
+    let regexp=/^[A-Z]/;
+    function IsFristStringUpperCase(str) {
+        if (regexp.test(str)){
+            alert("bat dau laf ki tu hoa");
+        }else {
+            alert("khoong phai roif nhe");
+        }
+    }
+    let stingInput=prompt("nhap  chuoi muon check");
+    IsFristStringUpperCase(stingInput);
+</script>
+</body>
+</html>
