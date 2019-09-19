@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check Zip Code USA</title>
+</head>
+<body>
+<script>
+    let regexp = /^[0-9]{5}(?:-[0-9]{4})?$/;
+
+    // bat dau tu 0-9,
+    function checkCode(str) {
+        if (regexp.test(str)) {
+            return true;
+        }
+        return false;
+    }
+
+    let zipCode ='03201- 2150';
+    zipCode="35801";
+    console.log(checkCode(zipCode));
+    zipCode = "7892";
+    console.log(checkCode(zipCode));
+</script>
+</body>
+</html>
