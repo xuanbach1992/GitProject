@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check validate phone number</title>
+</head>
+<body>
+<script>
+    function checkValidate(str) {
+        regex=/^[0-9]{2}[-]+[0]+([0-9]{9})$/;
+        if (regex===str){
+            return true;
+        }
+        return false;
+    }
+</script>
+</body>
+</html>
