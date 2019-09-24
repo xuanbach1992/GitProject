@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check phone number viettel</title>
+</head>
+<body>
+<script>
+    function ckeckPhoneNunmberVietel(str) {
+        let regex = /^[0]([3][3-9]|[9][6-8]|[8][6])[0-9]{7}$/;
+        if (regex === str) {
+            return true;
+        }
+        return false;
+    }
+</script>
+</body>
+</html>
