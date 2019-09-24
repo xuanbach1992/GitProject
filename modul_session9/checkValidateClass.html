@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check validate class</title>
+</head>
+<body>
+<script>
+    function checkValidateClass(str) {
+        let regex = /^[CAP][0-9]{4}[0-9a-zA-Z]*[GHIKLM]$/;
+        if (str === regex) {
+            return true;
+        }
+        return false;
+    }
+</script>
+</body>
+</html>
