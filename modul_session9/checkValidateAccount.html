@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check Validate Account</title>
+</head>
+<body>
+<script>
+    function checkValidateAccount(str) {
+        let regrex = /^[a-z0-9_]{6}[a-z0-9_]*/;
+        if (str === regrex) {
+            return true;
+        }
+        return false;
+    }
+</script>
+</body>
+</html>
