@@ -23,12 +23,10 @@ function inputNum() {
 }
 
 function gamePlay() {
-    if (count < 5) {
-        setInterval(checkRandomNumber, 100);
-    } else {
-        clearInterval(checkRandomNumber);
+        for (let count = 0; count < 5; count++) {
+            checkRandomNumber();
+        }
         alert("ban da het luot doan");
-    }
 }
 
 function checkRandomNumber() {
@@ -40,5 +38,5 @@ function checkRandomNumber() {
     } else {
         alert("lon hon roi, doan lai di");
     }
-        count++;
+
 }
