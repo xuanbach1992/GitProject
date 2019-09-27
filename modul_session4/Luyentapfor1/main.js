@@ -21,10 +21,10 @@ function Exam2() {
     }
 }
 
-function Fibonacci(value) {
+function fibonacci(value) {
     let numbers_1 = 1;
     let numbers_2 = 0;
-    let numbers = 1;//0 or 1 tuy thuoc day bat dau tu
+    let numbers = 1;//0 or 1 tuy thuoc day bat dau tu dau
     for (let i = 0; i < value; i++) {
         numbers = numbers_1 + numbers_2;
         numbers_2 = numbers_1;
@@ -35,7 +35,7 @@ function Fibonacci(value) {
 
 function Exam3() {
     for (let i = 0; i < 20; i++) {
-        document.write(Fibonacci(i) + " ");
+        document.write(fibonacci(i) + " ");
     }
 
 }
