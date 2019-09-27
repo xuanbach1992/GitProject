@@ -42,8 +42,8 @@ function Exam3() {
 
 function Exam4() {
     for (let i = 0; i < 20; i++) {
-        if (Fibonacci(i) % 5 == 0) {
-            document.write(Fibonacci(i) + " ");
+        if (fibonacci(i) % 5 == 0) {
+            document.write(fibonacci(i) + " ");
             break;
         }
     }
@@ -52,7 +52,7 @@ function Exam4() {
 function Exam5() {
     let total = 0;
     for (let i = 0; i < 20; i++) {
-        total += Fibonacci(i);
+        total += fibonacci(i);
     }
     document.write(total);
 }
